@@ -26,7 +26,7 @@ public class Book implements Serializable {
         this.url = url;
     }
 
-    public Book(String title, String booksCategory, String description, String author, int quantity, double prize, String url) {
+    public Book(String booksCategory, String title, String description, String author, int quantity, double prize, String url) {
         this.title = title;
         this.booksCategory = booksCategory;
         this.description = description;
