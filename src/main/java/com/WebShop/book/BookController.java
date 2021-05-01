@@ -1,13 +1,11 @@
-package com.WebShop.WebShop.Book;
+package com.WebShop.book;
 
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/book")

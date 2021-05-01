@@ -1,24 +1,26 @@
-package com.WebShop.WebShop.Book;
+package com.WebShop.book;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class Book {
+@Embeddable
+public class Book implements Serializable {
 
-    private String title;
-    private String description;
     @Id
     private int isbn;
+    private final BooksCategory booksCategory = BooksCategory.CHESS;
+    private String title;
+    private String description;
     private String author;
     private int quantity;
     private double prize;
 
 
     public Book(String title, String description, int isbn, String author, int quantity, double prize) {
+        this.isbn = isbn;
         this.title = title;
         this.description = description;
-        this.isbn = isbn;
         this.author = author;
         this.quantity = quantity;
         this.prize = prize;
@@ -61,9 +63,14 @@ public class Book {
         this.quantity = quantity;
     }
 
-    public double getPrize() {return prize; }
+    public double getPrize() {
+        return prize;
+    }
 
-    public void setPrize(double prize) { this.prize = prize; }
+    public void setPrize(double prize) {
+        this.prize = prize;
+    }
 
-    public Book() { }
+    public Book() {
+    }
 }
