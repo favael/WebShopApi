@@ -20,28 +20,33 @@ public class BookController {
 
 
     @GetMapping
+    @CrossOrigin
     public List<Book> getBooks() {
         return bookRepository.findAll();
     }
 
     @PostMapping
+    @CrossOrigin
     public Book addbook(@RequestBody Book book) {
         bookRepository.save(book);
         return book;
     }
 
     @GetMapping("/{isbn}")
+    @CrossOrigin
     public Optional<Book> getBook(@PathVariable int isbn) {
 
         return bookRepository.findById(isbn);
     }
 
     @DeleteMapping("/{isbn}")
+    @CrossOrigin
     public void deleteBook(@PathVariable int isbn) {
         bookRepository.deleteById(isbn);
     }
 
     @PutMapping()
+    @CrossOrigin
     public Book updateBook(@RequestBody Book book) {
 
         Book updateBook = bookRepository.getOne(book.getIsbn());
@@ -54,6 +59,7 @@ public class BookController {
         return updateBook;
     }
     @PostConstruct
+    @CrossOrigin
     public void exampleBase () {
 
         Book[] books = {
