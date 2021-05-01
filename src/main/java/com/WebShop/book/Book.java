@@ -8,22 +8,27 @@ import java.io.Serializable;
 public class Book implements Serializable {
 
     @Id
+    @GeneratedValue
     private int isbn;
-    private final BooksCategory booksCategory = BooksCategory.CHESS;
     private String title;
+    private String booksCategory;
     private String description;
     private String author;
     private int quantity;
     private double prize;
 
 
-    public Book(String title, String description, int isbn, String author, int quantity, double prize) {
-        this.isbn = isbn;
+    public Book(String booksCategory, String title, String description, String author, int quantity, double prize) {
         this.title = title;
         this.description = description;
         this.author = author;
         this.quantity = quantity;
         this.prize = prize;
+        this.booksCategory = booksCategory;
+    }
+
+    public int getIsbn() {
+        return isbn;
     }
 
     public String getTitle() {
@@ -34,6 +39,14 @@ public class Book implements Serializable {
         this.title = title;
     }
 
+    public String getBooksCategory() {
+        return booksCategory;
+    }
+
+    public void setBooksCategory(String booksCategory) {
+        this.booksCategory = booksCategory;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -41,11 +54,6 @@ public class Book implements Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
-
-    public int getIsbn() {
-        return isbn;
-    }
-
 
     public String getAuthor() {
         return author;
