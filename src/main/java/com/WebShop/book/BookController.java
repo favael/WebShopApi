@@ -61,12 +61,12 @@ public class BookController {
     public void exampleBase () {
 
         Book[] books = {
-                new Book(BooksCategory.CHESS.categoryName, "Agresywne szachy", "Long long time ago", "Kasparov",10,29.99),
-                new Book(BooksCategory.CHESS.categoryName, "Obrona francuska", "Słaby debiut ale zawsze cos", "Karpov",30,99.99),
-                new Book(BooksCategory.CHESS.categoryName,"Obrona Holenderska", "Sam go uzywam", "Majdan",5,50.99),
-                new Book(BooksCategory.DRAMA.categoryName,"Romeo i Julia", "Opowieść o pięknej miłości", "William Shekspire", 10, 120.55),
-                new Book(BooksCategory.COOK.categoryName,"Gotuj razem z nami", "Domowe przepisy", "Gal Anonim", 3, 26.00),
-                new Book(BooksCategory.HISTORY.categoryName, "Dawno dawno temu w lesie", "Historia małego liska", "Jan Brzechwa", 9, 6.99)
+                new Book(BooksCategory.CHESS.categoryName, "Agresywne szachy", "Long long time ago", "Kasparov",10, 29.99, "https://ibb.co/mDNCR0m"),
+                new Book(BooksCategory.CHESS.categoryName, "Obrona francuska", "Słaby debiut ale zawsze cos", "Karpov",30, 29.99, "https://ibb.co/CWNhRVv"),
+                new Book(BooksCategory.CHESS.categoryName,"Obrona Holenderska", "Sam go uzywam", "Majdan",5,50.99, "https://ibb.co/5GbNpzt"),
+                new Book(BooksCategory.DRAMA.categoryName,"Romeo i Julia", "Opowieść o pięknej miłości", "William Shekspire", 10, 120.55, "https://ibb.co/hfsRdKW"),
+                new Book(BooksCategory.COOK.categoryName,"Gotuj z nami", "Domowe przepisy", "Ewa Chodakowskagotuj ", 3, 26.00, "https://ibb.co/8dpY0Hn"),
+                new Book(BooksCategory.HISTORY.categoryName, "Dawno dawno temu w lesie", "Kłopoty  małego liska", "Wioletta Święcińska", 9, 6.99, "https://ibb.co/9sgPG1m")
         };
 
         Arrays.stream(books)

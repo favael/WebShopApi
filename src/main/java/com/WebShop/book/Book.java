@@ -16,15 +16,24 @@ public class Book implements Serializable {
     private String author;
     private int quantity;
     private double prize;
+    private String url;
 
+    public String getUrl() {
+        return url;
+    }
 
-    public Book(String booksCategory, String title, String description, String author, int quantity, double prize) {
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public Book(String title, String booksCategory, String description, String author, int quantity, double prize, String url) {
         this.title = title;
+        this.booksCategory = booksCategory;
         this.description = description;
         this.author = author;
         this.quantity = quantity;
         this.prize = prize;
-        this.booksCategory = booksCategory;
+        this.url = url;
     }
 
     public int getIsbn() {
