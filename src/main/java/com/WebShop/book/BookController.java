@@ -61,12 +61,12 @@ public class BookController {
     public void exampleBase () {
 
         Book[] books = {
-                new Book(BooksCategory.CHESS.categoryName, "Agresywne szachy", "Long long time ago", "Kasparov",10, 29.99, "https://www.youtube.com/watch?v=KQJOMPWddbA&ab_channel=xntentacion"),
-                new Book(BooksCategory.CHESS.categoryName, "Obrona francuska", "Słaby debiut ale zawsze cos", "Karpov",30, 29.99, "https://www.youtube.com/watch?v=cvu28pKql8g&ab_channel=CelineDionVEVO"),
-                new Book(BooksCategory.CHESS.categoryName,"Obrona Holenderska", "Sam go uzywam", "Majdan",5,50.99, "https://www.youtube.com/watch?v=UWdhtbmQsng&ab_channel=NatoGogichashvili"),
-                new Book(BooksCategory.DRAMA.categoryName,"Romeo i Julia", "Opowieść o pięknej miłości", "William Shekspire", 10, 120.55, "https://www.youtube.com/watch?v=ByfFurjQDb0&ab_channel=CalumScottVEVO"),
-                new Book(BooksCategory.COOK.categoryName,"Gotuj z nami", "Domowe przepisy", "Ewa Chodakowskagotuj ", 3, 26.00, "https://www.youtube.com/watch?v=ChcR2gKt5WM&ab_channel=AndreaBocelliVEVO"),
-                new Book(BooksCategory.HISTORY.categoryName, "Dawno dawno temu w lesie", "Kłopoty  małego liska", "Wioletta Święcińska", 9, 6.99, "https://www.youtube.com/watch?v=5vheNbQlsyU&ab_channel=LadyGagaVEVO")
+                new Book(BooksCategory.CHESS.categoryName, "Agresywne szachy", "Long long time ago", "Kasparov",10, 29.99, "https://www.youtube.com/embed/watch?v=KQJOMPWddbA&ab_channel=xntentacion"),
+                new Book(BooksCategory.CHESS.categoryName, "Obrona francuska", "Słaby debiut ale zawsze cos", "Karpov",30, 29.99, "https://www.youtube.com/embed/watch?v=cvu28pKql8g&ab_channel=CelineDionVEVO"),
+                new Book(BooksCategory.CHESS.categoryName,"Obrona Holenderska", "Sam go uzywam", "Majdan",5,50.99, "https://www.youtube.com/embed/watch?v=UWdhtbmQsng&ab_channel=NatoGogichashvili"),
+                new Book(BooksCategory.DRAMA.categoryName,"Romeo i Julia", "Opowieść o pięknej miłości", "William Shekspire", 10, 120.55, "https://www.youtube.com/embed/watch?v=ByfFurjQDb0&ab_channel=CalumScottVEVO"),
+                new Book(BooksCategory.COOK.categoryName,"Gotuj z nami", "Domowe przepisy", "Ewa Chodakowskagotuj ", 3, 26.00, "https://www.youtube.com/embed/watch?v=ChcR2gKt5WM&ab_channel=AndreaBocelliVEVO"),
+                new Book(BooksCategory.HISTORY.categoryName, "Dawno dawno temu w lesie", "Kłopoty  małego liska", "Wioletta Święcińska", 9, 6.99, "https://www.youtube.com/embed/watch?v=5vheNbQlsyU&ab_channel=LadyGagaVEVO")
         };
 
         Arrays.stream(books)
