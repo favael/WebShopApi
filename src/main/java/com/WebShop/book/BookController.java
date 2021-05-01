@@ -61,12 +61,12 @@ public class BookController {
     public void exampleBase () {
 
         Book[] books = {
-                new Book(BooksCategory.CHESS.categoryName, "Agresywne szachy", "Long long time ago", "Kasparov",10, 29.99, "https://youtu.be/embed/KQJOMPWddbA"),
-                new Book(BooksCategory.CHESS.categoryName, "Obrona francuska", "Słaby debiut ale zawsze cos", "Karpov",30, 29.99, "https://youtu.be/embed/cvu28pKql8g"),
-                new Book(BooksCategory.CHESS.categoryName,"Obrona Holenderska", "Sam go uzywam", "Majdan",5,50.99, "https://youtu.be/embed/UWdhtbmQsng"),
-                new Book(BooksCategory.DRAMA.categoryName,"Romeo i Julia", "Opowieść o pięknej miłości", "William Shekspire", 10, 120.55, "https://youtu.be/embed/ByfFurjQDb0"),
-                new Book(BooksCategory.COOK.categoryName,"Gotuj z nami", "Domowe przepisy", "Ewa Chodakowskagotuj ", 3, 26.00, "https://youtu.be/embed/ChcR2gKt5WM"),
-                new Book(BooksCategory.HISTORY.categoryName, "Dawno dawno temu w lesie", "Kłopoty  małego liska", "Wioletta Święcińska", 9, 6.99, "https://youtu.be/embed/5vheNbQlsyU")
+                new Book(BooksCategory.CHESS.categoryName, "Agresywne szachy", "Long long time ago", "Kasparov",10, 29.99, "https://www.youtube.com/embed/KQJOMPWddbA"),
+                new Book(BooksCategory.CHESS.categoryName, "Obrona francuska", "Słaby debiut ale zawsze cos", "Karpov",30, 29.99, "https://www.youtube.com/embed/cvu28pKql8g"),
+                new Book(BooksCategory.CHESS.categoryName,"Obrona Holenderska", "Sam go uzywam", "Majdan",5,50.99, "https://www.youtube.com/embed/UWdhtbmQsng"),
+                new Book(BooksCategory.DRAMA.categoryName,"Romeo i Julia", "Opowieść o pięknej miłości", "William Shekspire", 10, 120.55, "https://www.youtube.com/embed/ByfFurjQDb0"),
+                new Book(BooksCategory.COOK.categoryName,"Gotuj z nami", "Domowe przepisy", "Ewa Chodakowskagotuj ", 3, 26.00, "https://www.youtube.com/embed/ChcR2gKt5WM"),
+                new Book(BooksCategory.HISTORY.categoryName, "Dawno dawno temu w lesie", "Kłopoty  małego liska", "Wioletta Święcińska", 9, 6.99, "https://www.youtube.com/embed/5vheNbQlsyU")
         };
 
         Arrays.stream(books)
