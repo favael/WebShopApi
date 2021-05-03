@@ -1,11 +1,9 @@
 package com.WebShop.book;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
-@Embeddable
-public class Book implements Serializable {
+public class Book  {
 
     @Id
     @GeneratedValue

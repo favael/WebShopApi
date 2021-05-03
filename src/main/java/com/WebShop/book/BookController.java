@@ -6,6 +6,7 @@ import javax.annotation.PostConstruct;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 @RestController
 @RequestMapping("/book")
@@ -22,6 +23,46 @@ public class BookController {
     public List<Book> getBooks() {
         return bookRepository.findAll();
     }
+
+    @GetMapping("/szachy")
+    @CrossOrigin
+    public Stream<Book> getChessBooks() {
+        return bookRepository.findAll().stream()
+                .filter(b -> b.getBooksCategory().equals(BooksCategory.CHESS.categoryName));
+    }
+
+    @GetMapping("/romans")
+    @CrossOrigin
+    public Stream<Book> getRomanticBooks() {
+        return bookRepository.findAll().stream()
+                .filter(b -> b.getBooksCategory().equals(BooksCategory.ROMANCE.categoryName));
+    }
+    @GetMapping("/geografia")
+    @CrossOrigin
+    public Stream<Book> getGeographyBooks() {
+        return bookRepository.findAll().stream()
+                .filter(b -> b.getBooksCategory().equals(BooksCategory.GEOGRAPHY.categoryName));
+    }
+
+    @GetMapping("/dramat")
+    @CrossOrigin
+    public Stream<Book> getDramaBooks() {
+        return bookRepository.findAll().stream()
+                .filter(b -> b.getBooksCategory().equals(BooksCategory.DRAMA.categoryName));
+    }
+    @GetMapping("/scfi")
+    @CrossOrigin
+    public Stream<Book> getScfiBooks() {
+        return bookRepository.findAll().stream()
+                .filter(b -> b.getBooksCategory().equals(BooksCategory.SCIFI.categoryName));
+    }
+    @GetMapping("/gotowanie")
+    @CrossOrigin
+    public Stream<Book> getCookBooks() {
+        return bookRepository.findAll().stream()
+                .filter(b -> b.getBooksCategory().equals(BooksCategory.COOK.categoryName));
+    }
+
 
     @PostMapping
     @CrossOrigin
@@ -61,12 +102,13 @@ public class BookController {
     public void exampleBase () {
 
         Book[] books = {
-                new Book(BooksCategory.CHESS.categoryName, "Agresywne szachy", "Long long time ago", "Kasparov",10, 29.99, "https://www.youtube.com/embed/KQJOMPWddbA"),
-                new Book(BooksCategory.CHESS.categoryName, "Obrona francuska", "Słaby debiut ale zawsze cos", "Karpov",30, 29.99, "https://www.youtube.com/embed/cvu28pKql8g"),
-                new Book(BooksCategory.CHESS.categoryName,"Obrona Holenderska", "Sam go uzywam", "Majdan",5,50.99, "https://www.youtube.com/embed/UWdhtbmQsng"),
-                new Book(BooksCategory.DRAMA.categoryName,"Romeo i Julia", "Opowieść o pięknej miłości", "William Shekspire", 10, 120.55, "https://www.youtube.com/embed/ByfFurjQDb0"),
-                new Book(BooksCategory.COOK.categoryName,"Gotuj z nami", "Domowe przepisy", "Ewa Chodakowskagotuj ", 3, 26.00, "https://www.youtube.com/embed/ChcR2gKt5WM"),
-                new Book(BooksCategory.HISTORY.categoryName, "Dawno dawno temu w lesie", "Kłopoty  małego liska", "Wioletta Święcińska", 9, 6.99, "https://www.youtube.com/embed/5vheNbQlsyU")
+                new Book(BooksCategory.CHESS.categoryName, "Agresywne szachy", "Long long time ago", "Kasparov",10, 29.99, "agresywne_szachy.jpeg"),
+                new Book(BooksCategory.GEOGRAPHY.categoryName, "Agresywne szachy", "Long long time ago", "Kasparov",10, 29.99, "agresywne_szachy.jpeg"),
+                new Book(BooksCategory.DRAMA.categoryName, "Obrona francuska", "Słaby debiut ale zawsze cos", "Karpov",30, 29.99, "french.jpeg"),
+                new Book(BooksCategory.SCIFI.categoryName,"Obrona Holenderska", "Sam go uzywam", "Majdan",5,50.99, "dutch.jpeg"),
+                new Book(BooksCategory.ROMANCE.categoryName,"Romeo i Julia", "Opowieść o pięknej miłości", "William Shakespeare", 10, 120.55, "romeo.jpeg"),
+                new Book(BooksCategory.COOK.categoryName,"Gotuj z nami", "Domowe przepisy", "Ewa Chodakowska gotuje ", 3, 26.00, "gotuj z nami.jpeg"),
+                new Book(BooksCategory.HISTORY.categoryName, "Kłopoty  małego liska", "Lisek ma przerabane", "Wioletta Święcińska", 9, 6.99, "lisek.jpeg")
         };
 
         Arrays.stream(books)
