@@ -108,7 +108,20 @@ public class BookController {
     public void exampleBase () {
 
         Book[] books = {
-                new Book(BooksCategory.CHESS.categoryName, "Agresywne szachy", "Dobrze się stało, że wydawnictwo „Penelopa” sięgnęło po tłumaczenia wartościowych książek, które są tak potrzebne polskim szachistom. Autorem przedstawionej pracy jest duński arcymistrz mieszkający na stałe w Szkocji. Jacob Aagaard omawia w niej różne problemy prowadzenia ataku w partii szachowej. Jest to więc doskonały podręcznik dla tych, co chcą poznać bliżej ważne motywy taktyczne najczęściej spotykane w praktyce turniejowej." +
+                new Book(BooksCategory.CHESS.categoryName, "Agresywne szachy", "Dobrze się stało, że wydawnictwo „Penelopa” sięgnęło po tłumaczenia wartościowych książek, które są tak potrzebne polskim szachistom. Autorem przedstawionej pracy jest duński arcymistrz mieszkający na stałe w Szkocji. Jacob Aagaard omawia w niej różne problemy prowadzenia ataku w partii szachowej. Jest to więc doskonały podręcznik dla tych, co chcą poznać bliżej ważne motywy taktyczne najczęściej spotykane w praktyce turniejowej. Zawodnicy bardziej zaawansowani mogą natomiast pogłębić wiedzę o kombinacyjnej grze. Oczywiście szkoleniowcy mają tutaj gotowy materiał do zajęć z młodzieżą.\n" +
+                        "\n" +
+                        "Tematyczny podział książki:\n" +
+                        "Zmasowanymi siłami do ataku (Rozdział pierwszy)\n" +
+                        "Nie tracić pary (Rozdział drugi)\n" +
+                        "Dodać nieco koloru do swojej gry (Rozdział trzeci)\n" +
+                        "Względna wartość figur się liczy! (Rozdział czwarty)\n" +
+                        "Uderz tam, gdzie zaboli (Rozdział piąty)\n" +
+                        "Gryząc glebę (Rozdział szósty)\n" +
+                        "Ewolucja/rewolucja (Rozdział siódmy)\n" +
+                        "15 wielkich przykładów ataku (Rozdział ósmy)\n" +
+                        "Nie zapomnij zrobić następnego kroku (Rozdział dziewiąty)\n" +
+                        "\n" +
+                        "Każdy rozdział rozpoczyna się ćwiczeniami wprowadzającymi." +
 
                         "Każdy rozdział rozpoczyna się ćwiczeniami wprowadzającymi.", "Kasparov",10, 29.99, "agresywne_szachy.jpeg"),
                 new Book(BooksCategory.CHESS.categoryName, "Obrona francuska", "Słaby debiut ale zawsze cos", "Karpov",30, 29.99, "french.jpeg"),
