@@ -11,7 +11,7 @@ public class Book  {
     private int isbn;
     private String title;
     private String booksCategory;
-    @Size(max=5000)
+    @Size(max=10000)
     private String description;
     private String author;
     private int quantity;
