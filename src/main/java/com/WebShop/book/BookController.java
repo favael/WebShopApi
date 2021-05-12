@@ -108,7 +108,9 @@ public class BookController {
     public void exampleBase () {
 
         Book[] books = {
-                new Book(BooksCategory.CHESS.categoryName, "Agresywne szachy", "Long long time ago", "Kasparov",10, 29.99, "agresywne_szachy.jpeg"),
+                new Book(BooksCategory.CHESS.categoryName, "Agresywne szachy", "Dobrze się stało, że wydawnictwo „Penelopa” sięgnęło po tłumaczenia wartościowych książek, które są tak potrzebne polskim szachistom. Autorem przedstawionej pracy jest duński arcymistrz mieszkający na stałe w Szkocji. Jacob Aagaard omawia w niej różne problemy prowadzenia ataku w partii szachowej. Jest to więc doskonały podręcznik dla tych, co chcą poznać bliżej ważne motywy taktyczne najczęściej spotykane w praktyce turniejowej." +
+
+                        "Każdy rozdział rozpoczyna się ćwiczeniami wprowadzającymi.", "Kasparov",10, 29.99, "agresywne_szachy.jpeg"),
                 new Book(BooksCategory.CHESS.categoryName, "Obrona francuska", "Słaby debiut ale zawsze cos", "Karpov",30, 29.99, "french.jpeg"),
                 new Book(BooksCategory.CHESS.categoryName,"Obrona Holenderska", "Sam go uzywam", "Majdan",5,50.99, "dutch.jpeg"),
                 new Book(BooksCategory.CHESS.categoryName,"Mój System", "Bestseller!! ", "Nimzowitsch",11,90.99, "moj system.jpeg"),
