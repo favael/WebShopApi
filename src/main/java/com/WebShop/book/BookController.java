@@ -111,7 +111,7 @@ public class BookController {
                 new Book(BooksCategory.CHESS.categoryName, "Agresywne szachy", "Long long time ago", "Kasparov",10, 29.99, "agresywne_szachy.jpeg"),
                 new Book(BooksCategory.CHESS.categoryName, "Obrona francuska", "Słaby debiut ale zawsze cos", "Karpov",30, 29.99, "french.jpeg"),
                 new Book(BooksCategory.CHESS.categoryName,"Obrona Holenderska", "Sam go uzywam", "Majdan",5,50.99, "dutch.jpeg"),
-                new Book(BooksCategory.CHESS.categoryName,"MÓJ SYSTEM", "Bestseller!! ", "Nimzowitsch",11,90.99, "moj system.jpeg"),
+                new Book(BooksCategory.CHESS.categoryName,"Mój System", "Bestseller!! ", "Nimzowitsch",11,90.99, "moj system.jpeg"),
                 new Book(BooksCategory.CHESS.categoryName,"Obrona Sycylijska", "Bestseller!! ", "Damazy Sowiecki",2,40.99, "obrona sycylijska.jpeg"),
                 new Book(BooksCategory.CHESS.categoryName,"Obrona Skandynawska", "Nie ma żadnych wątpliwości, że podstawą sukcesu w każdej partii szachowej jest pomyślny start.", "Jerzy  Konikowski",9,66.99, "obrona skandynawska.jpeg"),
                 new Book(BooksCategory.ROMANCE.categoryName,"Romeo i Julia", "Opowieść o pięknej miłości", "William Shakespeare", 10, 120.55, "romeo.jpeg"),
