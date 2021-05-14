@@ -16,8 +16,9 @@ private final SoldBookRepository soldBookRepository;
 
     @PostMapping("/shoppingCardList")
     @CrossOrigin
-    public void addToCardList(@RequestBody SoldBook book) {
+    public SoldBook addToCardList(@RequestBody SoldBook book) {
         soldBookRepository.save(book);
+        return book;
     }
     @GetMapping("/shoppingCardList")
     @CrossOrigin
