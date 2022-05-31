@@ -139,8 +139,8 @@ public class BookController {
         return shoppingCardList.removeAll(shoppingCardList);
     }
 
-    @RequestMapping("/findAll")
-    public List<Book> findBySearch (String key) {
+    @RequestMapping("/findAll/{key}")
+    public List<Book> findBySearch (@PathVariable String key) {
         return bookRepository.findall(key);
     }
 
