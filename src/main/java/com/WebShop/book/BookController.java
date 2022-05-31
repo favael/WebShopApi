@@ -1,15 +1,18 @@
 package com.WebShop.book;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @RestController
 @RequestMapping("/book")
 public class BookController {
+    @Autowired
     private final BookRepository bookRepository;
 
     public BookController(BookRepository bookRepository) {
@@ -124,6 +127,21 @@ public class BookController {
     @CrossOrigin
     public boolean delShoppingCardList() {
         return shoppingCardList.removeAll(shoppingCardList);
+    }
+
+    @DeleteMapping("/shoppingCardList/{isbn}")
+    @CrossOrigin
+    public boolean delShoppingCardListById(@PathVariable int isbn) {
+        final List<Boolean> collect = shoppingCardList.stream()
+                .map(book -> book.get().getIsbn() == isbn)
+                .collect(Collectors.toList());
+
+        return shoppingCardList.removeAll(shoppingCardList);
+    }
+
+    @RequestMapping("/findAll")
+    public List<Book> findBySearch (String key) {
+        return bookRepository.findall(key);
     }
 
 
