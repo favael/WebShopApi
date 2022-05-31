@@ -19,7 +19,7 @@ public class BookController {
         this.bookRepository = bookRepository;
     }
 
-    private final List<Book> shoppingCardList = new ArrayList<>();
+    private final List<Optional<Book>> shoppingCardList = new ArrayList<Optional<Book>>();
 
     @GetMapping
     @CrossOrigin
@@ -110,15 +110,16 @@ public class BookController {
         return updateBook;
     }
 
-    @PostMapping("/shoppingCardList")
+    @PostMapping("/shoppingCardList/{isbn}")
     @CrossOrigin
-    public Book addToCardList(@RequestBody Book book) {
-        shoppingCardList.add(book);
-    return book;
+    public Optional<Book> addToCardList(@PathVariable int isbn) {
+        final Optional<Book> byId = bookRepository.findById(isbn);
+        shoppingCardList.add(byId);
+    return byId;
     }
     @GetMapping("/shoppingCardList")
     @CrossOrigin
-    public List<Book> getShoppingCardList() {
+    public List<Optional<Book>> getShoppingCardList() {
         return shoppingCardList;
     }
 
