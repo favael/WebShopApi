@@ -4,10 +4,7 @@ package com.WebShop.book;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Stream;
 
 @RestController
@@ -122,6 +119,11 @@ public class BookController {
     @CrossOrigin
     public List<Optional<Book>> getShoppingCardList() {
         return shoppingCardList;
+    }
+    @DeleteMapping("/shoppingCardList")
+    @CrossOrigin
+    public boolean delShoppingCardList() {
+        return shoppingCardList.removeAll(shoppingCardList);
     }
 
 
