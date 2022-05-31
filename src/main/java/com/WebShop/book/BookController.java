@@ -139,7 +139,7 @@ public class BookController {
         return shoppingCardList.removeAll(shoppingCardList);
     }
 
-    @RequestMapping("/findAll/{key}")
+    @GetMapping("/findAll/{key}")
     public List<Book> findBySearch (@PathVariable String key) {
         return bookRepository.findall(key);
     }
